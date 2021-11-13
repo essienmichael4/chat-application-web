@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +13,7 @@
     $primaryDark: #531965;
     $green: #30b004;
     $primaryLight: #e0f0c1;
+    font-family: 'Raleway', sans-serif;
 
     body{
         width: 100%;
@@ -17,56 +21,211 @@
         background-color: #110c0f;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
         color: #e0f0c1;
 
-        .container{
-            width: 90%;
-            min-height: 100%;
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4rem;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            position: relative;
+            background-color: rgba($color: #000000, $alpha: .5);
+            z-index: 1000;
 
-            header{
-                position: fixed;
-                top: 0;
-                left: 0;
+            .headerContainer{
                 width: 100%;
-                height: 4rem;
+                max-width: 1440px;
+                height: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
-                // background-color: yellow;
+                padding: 0 5rem;
+                z-index: 3000;
 
-                .headerContainer{
-                    width: 90%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                h1{
+                    color:#42f833;
+                    text-transform: uppercase;
+                }
 
-                    h1{
-                        color:#42f833;
-                        text-transform: uppercase;
-                    }
+                a{
+                    display: block;
+                    color: $primaryLight;
+                    text-transform: uppercase;
+                    background-color: $green;
+                    border-radius: 25px 25px 0 25px;
+                    padding: .5rem 2.5rem;
+                    font-weight: 700;
+                    font-size: .9rem;
+                }
+            }
+        }
 
-                    a{
-                        display: block;
-                        color: $primaryLight;
-                        text-transform: uppercase;
-                        background-color: $green;
-                        border-radius: 25px 25px 0 25px;
-                        padding: .5rem 1rem;
-                    }
+        .banner{
+            position: relative;
+            width: 100%;
+            // background-color: rosybrown;
+            max-width: 1440px;
+            height: 100vh;
+            max-height: 650px;
+            background: url("../assets/banner1.jpg") no-repeat center center;
+            background-size: cover;
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 5rem;
+            padding: 0 5rem;
+            
+
+            h2:first-child{
+                margin-left: 15rem;
+                font-weight: 300;
+                color:orangered;
+                font-family: 'Shalimar', cursive;
+
+                span{
+                    font-weight: 300;
+                    color:orangered;
                 }
             }
 
-            main{
-                margin-top: 4rem;
-                width: 100%;
-                min-height: 100%;
-                // background-color: white;
+            p{
+                align-self: flex-end;
+                color: white;
+                // font-size: 5rem;
+
+                span{
+                    // font-weight: 300;
+                    font-size: 7rem;
+                    color:orangered;
+                    font-weight: bold;
+                    font-family: 'Shalimar', cursive;
+                }
+            }
+
+            .family{
+                font-size: 7rem;
+                font-weight: bold;
+                align-self: flex-end;
+                color: orangered;
+                font-family: 'Shalimar', cursive;
+            }
+
+            .scroll{
+                position: absolute;
+                bottom: 3rem;
+                font-size: 12px;
+                right: 47%;
+                color: red;
+                text-transform: uppercase;
+
+                span{
+                    // color: $green;
+                    font-size: 12px;
+                }
             }
         }
+
+        .banner::before{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .3);
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .banner::after{
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: rgba($color: #645555, $alpha: .2);
+            top: 0;
+            right: 0;
+            pointer-events: none;
+        }
+
+        main{
+            // margin-top: 100vh;
+            width: 100%;
+            max-width: 1440px;
+            min-height: 100%;
+            // background-color: $primaryLight;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15rem;
+
+            .container{
+                width: 90%;
+                min-height: 100%;
+                // display: flex;
+                // flex-direction: column;
+                align-items: center;
+                position: relative;
+                // background-color: $green;
+
+                
+                section{
+                    margin-top: 4rem;
+                    margin-bottom: 3rem;
+                    width: 100%;
+                    min-height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+
+                    img{
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    .info{
+                        width: 35%;
+                        display: flex;
+                        flex-direction: column;
+                        
+
+                        h2{
+                            margin-bottom: 1rem;
+
+                            color: $green;
+                        }
+                        
+                        p{
+                            line-height: 1.5rem;
+                            word-spacing: .3rem;
+                        }
+                        a{
+                            width: 11.5rem;
+                            margin-top: 3rem;
+                            justify-self: flex-end;
+                            display: block;
+                            color: $primaryLight;
+                            text-transform: uppercase;
+                            background-color: $green;
+                            border-radius: 25px 25px 0 25px;
+                            padding: .5rem 2.5rem;
+                            font-weight: 700;
+                            font-size: .9rem;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+
+        
     }
 }

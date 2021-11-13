@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  font-family: 'Raleway', sans-serif;
+}
+
+:root body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #110c0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root body .container {
+  width: 600px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border: 2px solid #30b004;
+}
+
+:root body .container #signupbtn:checked ~ .loginForm .login {
+  top: -400px;
+}
+
+:root body .container #signupbtn:checked ~ .loginForm .signupimage {
+  top: 0px;
+}
+
+:root body .container #signupbtn:checked ~ .signupForm .signup {
+  top: 0px;
+}
+
+:root body .container #signupbtn:checked ~ .signupForm .loginimage {
+  top: 400px;
+}
+
+:root body .container #loginbtn:checked ~ .loginForm .login {
+  top: 0px;
+}
+
+:root body .container #loginbtn:checked ~ .loginForm .signupimage {
+  top: 400px;
+}
+
+:root body .container #loginbtn:checked ~ .signupForm .signup {
+  top: -400px;
+}
+
+:root body .container #loginbtn:checked ~ .signupForm .loginimage {
+  top: 0px;
+}
+
+:root body .container .loginForm {
+  width: 300px;
+  height: 800px;
+  position: relative;
+}
+
+:root body .container .loginForm .login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+:root body .container .loginForm .login h2 {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #30b004;
+}
+
+:root body .container .loginForm .login .box {
+  width: 90%;
+  position: relative;
+  border: 1px solid #30b004;
+  margin: 1rem;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+}
+
+:root body .container .loginForm .login .box label {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  pointer-events: none;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #30b004;
+}
+
+:root body .container .loginForm .login .box input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #30b004;
+  font-size: 1rem;
+}
+
+:root body .container .loginForm .login .box input:focus ~ label,
+:root body .container .loginForm .login .box input:valid ~ label {
+  background: #e0f0c1;
+  left: 0px;
+  top: -10px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+:root body .container .loginForm .login button {
+  margin: 2rem 0 2rem 0;
+  padding: .5rem 4rem;
+  text-transform: uppercase;
+  background: transparent;
+  outline: none;
+  border: 2px solid #30b004;
+  font-weight: bold;
+  color: #30b004;
+}
+
+:root body .container .loginForm .login p {
+  font-size: 12px;
+  color: #e0f0c1;
+}
+
+:root body .container .loginForm .login p label {
+  color: #30b004;
+  cursor: pointer;
+}
+
+:root body .container .loginForm .signupimage {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: yellow;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+:root body .container .signupForm {
+  width: 300px;
+  height: 800px;
+  position: relative;
+}
+
+:root body .container .signupForm .signup {
+  position: absolute;
+  right: 0;
+  top: -400px;
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+:root body .container .signupForm .signup h2 {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #30b004;
+}
+
+:root body .container .signupForm .signup .box {
+  width: 90%;
+  position: relative;
+  border: 1px solid #30b004;
+  margin: .5rem;
+  padding: .3rem 1rem;
+  border-radius: 5px;
+}
+
+:root body .container .signupForm .signup .box label {
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  pointer-events: none;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  color: #30b004;
+}
+
+:root body .container .signupForm .signup .box input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #30b004;
+  font-size: 1rem;
+}
+
+:root body .container .signupForm .signup .box input:focus ~ label,
+:root body .container .signupForm .signup .box input:valid ~ label {
+  background: #e0f0c1;
+  left: 0px;
+  top: -10px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+:root body .container .signupForm .signup button {
+  margin: .5rem 0 .8rem 0;
+  padding: .5rem 4rem;
+  text-transform: uppercase;
+  background: transparent;
+  outline: none;
+  border: 2px solid #30b004;
+  font-weight: bold;
+  color: #30b004;
+}
+
+:root body .container .signupForm .signup p {
+  font-size: 12px;
+  color: #e0f0c1;
+}
+
+:root body .container .signupForm .signup p label {
+  color: #30b004;
+  cursor: pointer;
+}
+
+:root body .container .signupForm .loginimage {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: yellow;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+/*# sourceMappingURL=register.css.map */

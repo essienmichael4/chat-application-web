@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="loginbtn" hidden>
+        <input type="checkbox" id="signupbtn" hidden>
+        <div class="loginForm">
+            <form action="post" class="login">
+                <h2>login</h2>
+                
+                <div class="box">
+                    
+                    <input type="text" required>
+                    <label class="user">username/email</label>
+                </div>
+                <div class="box">
+                    
+                    <input type="password" required>
+                    <label class="password">password</label>
+                </div>
+
+                <button>login</button>
+
+                <p>Don't have an account? <label for="signupbtn">Signup</label></p>
+            </form>
+            <div class="signupimage"></div>
+        </div>
+        <div class="signupForm">
+            <div class="loginimage"></div>
+            <form action="post" class="signup">
+
+                <h2>signup</h2>
+                <div class="box">
+                    <input type="text" required>
+                    <label>first name</label>
+                </div>
+                <div class="box">
+                    <input type="text" required>
+                    <label>last name</label>
+                </div>
+                <div class="box">
+                    <input type="text" required>
+                    <label>email</label>
+                </div>
+                <div class="box">
+                    <input type="text" required>
+                    <label>password</label>
+                </div>
+                <div class="box">
+                    <input type="text" required>
+                    <label>repeat password</label>
+                </div>
+
+                <button>signup</button>
+
+                <p>Already have an account? <label for="loginbtn">Login</label></p>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

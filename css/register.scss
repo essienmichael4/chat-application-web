@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root{
+    $primaryDark: #531965;
+    $green: #30b004;
+    $primaryLight: #e0f0c1;
+    font-family: 'Raleway', sans-serif;
+
+    body{
+        width: 100%;
+        min-height: 100vh;
+        background-color: #110c0f;
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+        align-items: center;
+        // color: #e0f0c1;
+
+        .container{
+            width: 600px;
+            height: 400px;
+            // background-color: $primaryLight;
+            display: flex;
+            overflow: hidden;
+            border: 2px solid $green;
+
+            #signupbtn:checked ~ .loginForm .login{
+                top: -400px;
+            }
+
+            #signupbtn:checked ~ .loginForm .signupimage{
+                top: 0px;
+            }
+
+            #signupbtn:checked ~ .signupForm .signup{
+                top: 0px;
+            }
+
+            #signupbtn:checked ~ .signupForm .loginimage{
+                top: 400px;
+            }
+
+            #loginbtn:checked ~ .loginForm .login{
+                top: 0px;
+            }
+            #loginbtn:checked ~ .loginForm .signupimage{
+                top: 400px;
+            }
+            #loginbtn:checked ~ .signupForm .signup{
+                top: -400px;
+            }
+            #loginbtn:checked ~ .signupForm .loginimage{
+                top: 0px;
+            }
+
+            .loginForm{
+                width: 300px;
+                height: 800px;
+                // background-color: $green;
+                position: relative;
+
+                .login{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 400px;
+                    // background-color: $primaryLight;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: .5s ease;
+
+                    h2{
+                        text-transform: uppercase;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                        color: $green;
+                    }
+
+                    .box{
+                        width: 90%;
+                        position: relative;
+                        border: 1px solid $green;
+                        margin: 1rem;
+                        padding: .5rem 1rem;
+                        border-radius: 5px;
+
+                        label{
+                            position: absolute;
+                            top: 7px;
+                            left: 15px;
+                            pointer-events: none;
+                            transition: .5s ease;
+                            color: $green;
+                        }
+
+                        input{
+                            width: 100%;
+                            background: transparent;
+                            outline: none;
+                            border: none;
+                            color: $green;
+                            font-size: 1rem;
+                        }
+
+                        input:focus ~ label,
+                        input:valid ~ label{
+                            background: $primaryLight;
+                            left: 0px;
+                            top: -10px;
+                            transform: scale(.7);
+                        }
+                    }
+
+                    button{
+                        margin: 2rem 0 2rem 0;
+                        padding: .5rem 4rem;
+                        text-transform: uppercase;
+                        background: transparent;
+                        outline: none;
+                        border: 2px solid $green;
+                        font-weight: bold;
+                        color: $green;
+                    }
+
+                    p{
+                        font-size: 12px;
+                        color: $primaryLight;
+
+                        label{
+                            color: $green;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                
+
+                .signupimage{
+                    position: absolute;
+                    top: 400px;
+                    left: 0;
+                    width: 100%;
+                    height: 400px;
+                    background-color: yellow;
+                    transition: .5s ease;
+                 }
+            }
+
+            .signupForm{
+                width: 300px;
+                height: 800px;
+                // background-color: $primaryDark;
+                position: relative;
+
+                .signup{
+                    position: absolute;
+                    right: 0;
+                    top: -400px;
+                    width: 100%;
+                    height: 400px;
+                    // background-color: $primaryLight;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: .5s ease;
+
+                    h2{
+                        text-transform: uppercase;
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                        color: $green;
+                    }
+
+                    .box{
+                        width: 90%;
+                        position: relative;
+                        border: 1px solid $green;
+                        margin: .5rem;
+                        padding: .3rem 1rem;
+                        border-radius: 5px;
+
+                        label{
+                            position: absolute;
+                            top: 3px;
+                            left: 15px;
+                            pointer-events: none;
+                            transition: .5s ease;
+                            color: $green;
+                        }
+
+                        input{
+                            width: 100%;
+                            background: transparent;
+                            outline: none;
+                            border: none;
+                            color: $green;
+                            font-size: 1rem;
+                        }
+
+                        input:focus ~ label,
+                        input:valid ~ label{
+                            background: $primaryLight;
+                            left: 0px;
+                            top: -10px;
+                            transform: scale(.7);
+                        }
+                    }
+
+                    button{
+                        margin: .5rem 0 .8rem 0;
+                        padding: .5rem 4rem;
+                        text-transform: uppercase;
+                        background: transparent;
+                        outline: none;
+                        border: 2px solid $green;
+                        font-weight: bold;
+                        color: $green;
+                    }
+
+                    p{
+                        font-size: 12px;
+                        color: $primaryLight;
+
+                        label{
+                            color: $green;
+                            cursor: pointer;
+                        }
+                    }
+                 }
+
+                 .loginimage{
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    width: 100%;
+                    height: 400px;
+                    background-color: yellow;
+                    transition: .5s ease;
+                 }
+            }
+
+            
+
+        }
+    }
+}
