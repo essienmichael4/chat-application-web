@@ -53,22 +53,6 @@
   top: 400px;
 }
 
-:root body .container #loginbtn:checked ~ .loginForm .login {
-  top: 0px;
-}
-
-:root body .container #loginbtn:checked ~ .loginForm .signupimage {
-  top: 400px;
-}
-
-:root body .container #loginbtn:checked ~ .signupForm .signup {
-  top: -400px;
-}
-
-:root body .container #loginbtn:checked ~ .signupForm .loginimage {
-  top: 0px;
-}
-
 :root body .container .loginForm {
   width: 300px;
   height: 800px;
@@ -98,7 +82,7 @@
 :root body .container .loginForm .login h2 {
   text-transform: uppercase;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #30b004;
 }
 
@@ -132,7 +116,7 @@
 
 :root body .container .loginForm .login .box input:focus ~ label,
 :root body .container .loginForm .login .box input:valid ~ label {
-  background: #e0f0c1;
+  background: #110c0f;
   left: 0px;
   top: -10px;
   -webkit-transform: scale(0.7);
@@ -148,6 +132,11 @@
   border: 2px solid #30b004;
   font-weight: bold;
   color: #30b004;
+}
+
+:root body .container .loginForm .login button:hover {
+  background-color: #30b004;
+  color: #110c0f;
 }
 
 :root body .container .loginForm .login p {
@@ -166,9 +155,13 @@
   left: 0;
   width: 100%;
   height: 400px;
-  background-color: yellow;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+:root body .container .loginForm .signupimage img {
+  width: 100%;
+  height: 100%;
 }
 
 :root body .container .signupForm {
@@ -214,8 +207,10 @@
 }
 
 :root body .container .signupForm .signup .box label {
+  text-transform: uppercase;
+  font-size: .8rem;
   position: absolute;
-  top: 3px;
+  top: 7px;
   left: 15px;
   pointer-events: none;
   -webkit-transition: .5s ease;
@@ -234,9 +229,9 @@
 
 :root body .container .signupForm .signup .box input:focus ~ label,
 :root body .container .signupForm .signup .box input:valid ~ label {
-  background: #e0f0c1;
+  background: #110c0f;
   left: 0px;
-  top: -10px;
+  top: -8px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
 }
@@ -250,6 +245,12 @@
   border: 2px solid #30b004;
   font-weight: bold;
   color: #30b004;
+  cursor: pointer;
+}
+
+:root body .container .signupForm .signup button:hover {
+  background-color: #30b004;
+  color: #110c0f;
 }
 
 :root body .container .signupForm .signup p {
@@ -268,8 +269,12 @@
   left: 0;
   width: 100%;
   height: 400px;
-  background-color: yellow;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+}
+
+:root body .container .signupForm .loginimage img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=register.css.map */
