@@ -52,15 +52,19 @@
                     text-transform: uppercase;
                 }
 
-                a{
-                    display: block;
-                    color: $primaryLight;
-                    text-transform: uppercase;
-                    background-color: $green;
-                    border-radius: 25px 25px 0 25px;
-                    padding: .5rem 2.5rem;
-                    font-weight: 700;
-                    font-size: .9rem;
+                // a{
+                //     display: block;
+                //     color: $primaryLight;
+                //     text-transform: uppercase;
+                //     background-color: $green;
+                //     border-radius: 25px 25px 0 25px;
+                //     padding: .5rem 2.5rem;
+                //     font-weight: 700;
+                //     font-size: .9rem;
+                // }
+                i{
+                    color: $green;
+                    font-size: 20px;
                 }
             }
         }
@@ -179,10 +183,7 @@
                         height: 100%;
                         width: 50%;
                         min-width: 300px;
-                        // padding:  .2rem 1rem .5rem;
-                        // border: 1px solid #ebebeb;
                         display: flex;
-                        // background-color: #ebebeb;
 
                         textarea{
                             padding: .3rem;
@@ -215,6 +216,10 @@
                             // border-left: 1px solid green;
                             cursor: pointer;
                             transition: ease .5s;
+
+                            i{
+                                font-size: 25px;
+                            }
                         }
 
                         button:hover{

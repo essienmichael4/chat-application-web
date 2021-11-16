@@ -74,15 +74,9 @@
   text-transform: uppercase;
 }
 
-:root body header .headerContainer a {
-  display: block;
-  color: #e0f0c1;
-  text-transform: uppercase;
-  background-color: #30b004;
-  border-radius: 25px 25px 0 25px;
-  padding: .5rem 2.5rem;
-  font-weight: 700;
-  font-size: .9rem;
+:root body header .headerContainer i {
+  color: #30b004;
+  font-size: 20px;
 }
 
 :root body main {
@@ -278,6 +272,10 @@
   cursor: pointer;
   -webkit-transition: ease .5s;
   transition: ease .5s;
+}
+
+:root body main .messages .footer .text button i {
+  font-size: 25px;
 }
 
 :root body main .messages .footer .text button:hover {
