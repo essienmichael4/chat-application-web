@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  font-family: 'Raleway', sans-serif;
+}
+
+:root body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #110c0f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e0f0c1;
+}
+
+:root body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+:root body header .headerContainer {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5rem;
+  z-index: 3000;
+}
+
+:root body header .headerContainer h1 {
+  color: #42f833;
+  text-transform: uppercase;
+}
+
+:root body header .headerContainer a {
+  display: block;
+  color: #e0f0c1;
+  text-transform: uppercase;
+  background-color: #30b004;
+  border-radius: 25px 25px 0 25px;
+  padding: .5rem 2.5rem;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+:root body main {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 1440px;
+  height: calc(100vh - 4rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root body main .users, :root body main .contacts {
+  min-width: 15rem;
+  height: 100%;
+}
+
+:root body main .users {
+  border-right: 1px solid #30b004;
+}
+
+:root body main .contacts {
+  border-left: 1px solid #30b004;
+}
+
+:root body main .messages {
+  width: 50rem;
+  min-width: 20rem;
+  height: 100%;
+}
+
+:root body main .messages .header, :root body main .messages .footer {
+  height: 4rem;
+  width: 100%;
+}
+
+:root body main .messages .header {
+  border-bottom: 1px solid #30b004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .4rem 2rem;
+}
+
+:root body main .messages .header .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+:root body main .messages .header .user img {
+  height: 45px;
+  width: 45px;
+  background-color: chartreuse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+:root body main .messages .header .user .info {
+  font-size: 13px;
+}
+
+:root body main .messages .header .user .status {
+  height: 10px;
+  width: 10px;
+  background-color: chartreuse;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: -35px;
+}
+
+:root body main .messages .message {
+  width: 100%;
+  height: calc(100% - 8rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:root body main .messages .message .sent {
+  max-width: 50%;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin: 1rem;
+  background-color: #30b004;
+  padding: .5rem;
+  border-radius: 10px 10px 0 10px;
+}
+
+:root body main .messages .message .received {
+  max-width: 50%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 1rem;
+  background-color: #e0f0c1;
+  padding: .5rem;
+  color: #30b004;
+  border-radius: 10px 10px 10px 0;
+}
+
+:root body main .messages .footer {
+  border-top: 1px solid #30b004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root body main .messages .footer .text {
+  height: 100%;
+  width: 50%;
+  min-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+:root body main .messages .footer .text textarea {
+  padding: .3rem;
+  border: none;
+  outline: none;
+  resize: none;
+  height: 100%;
+  width: 80%;
+  scrollbar-width: none;
+  background: transparent;
+  color: #e0f0c1;
+}
+
+:root body main .messages .footer .text textarea::-webkit-input-placeholder {
+  color: #30b004;
+  opacity: .5;
+}
+
+:root body main .messages .footer .text textarea:-ms-input-placeholder {
+  color: #30b004;
+  opacity: .5;
+}
+
+:root body main .messages .footer .text textarea::-ms-input-placeholder {
+  color: #30b004;
+  opacity: .5;
+}
+
+:root body main .messages .footer .text textarea::placeholder {
+  color: #30b004;
+  opacity: .5;
+}
+
+:root body main .messages .footer .text button {
+  height: 100%;
+  width: 20%;
+  color: #30b004;
+  background: transparent;
+  border: none;
+  outline: none;
+  outline: 1px solid green;
+  outline-offset: -2px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+:root body main .messages .footer .text button:hover {
+  outline: 5px solid black;
+  outline-offset: -7px;
+  background-color: #30b004;
+  color: #e0f0c1;
+}
+
+:root body main .messages .footer .text textarea::-webkit-scrollbar {
+  display: none;
+}
+
+:root body main .messages .footer .person {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root body main .messages .footer .person .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+:root body main .messages .footer .person .user img {
+  height: 45px;
+  width: 45px;
+  background-color: chartreuse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+:root body main .messages .footer .person .user .info {
+  font-size: 13px;
+}
+
+:root body main .messages .footer .person .user .status {
+  height: 10px;
+  width: 10px;
+  background-color: chartreuse;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: -35px;
+}
+
+:root body main .users, :root body main .contacts {
+  overflow: hidden;
+}
+
+:root body main .users .contactsheader, :root body main .contacts .contactsheader {
+  height: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+:root body main .users .contactsheader h2, :root body main .contacts .contactsheader h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #30b004;
+}
+
+:root body main .users .header, :root body main .contacts .header {
+  height: 4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+:root body main .users .header h2, :root body main .contacts .header h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #30b004;
+}
+
+:root body main .users .header .searchUsers, :root body main .contacts .header .searchUsers {
+  width: 90%;
+  border: 1px solid #30b004;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: .3rem .3rem .35rem .5rem;
+  border-radius: 5px;
+}
+
+:root body main .users .header .searchUsers input, :root body main .contacts .header .searchUsers input {
+  width: 87%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #f4f4f4;
+}
+
+:root body main .users .container, :root body main .contacts .container {
+  width: 100%;
+  max-height: calc(100% - 4rem);
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 2rem .5rem;
+}
+
+:root body main .users .container .user, :root body main .contacts .container .user {
+  height: 4rem;
+  width: 100%;
+  background-color: #ebebeb;
+  margin-bottom: .5rem;
+  border-radius: 5px;
+  padding: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+:root body main .users .container .user img, :root body main .contacts .container .user img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+:root body main .users .container .user .info, :root body main .contacts .container .user .info {
+  height: 45px;
+  color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+:root body main .users .container .user .info p, :root body main .contacts .container .user .info p {
+  font-size: 13px;
+}
+
+:root body main .users .container .user .status, :root body main .contacts .container .user .status {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+:root body main .users .container::-webkit-scrollbar, :root body main .contacts .container::-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=chat.css.map */

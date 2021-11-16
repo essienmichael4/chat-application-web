@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
+    
+    <script src="https://kit.fontawesome.com/92a1905d17.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -14,20 +17,21 @@
         <div class="loginForm">
             <form action="post" class="login">
                 <h2>login</h2>
+                <div><p class="loginerror">This is an error message</p></div>
                 
                 <div class="box">
-                    
                     <input type="text" required>
                     <label class="user">username/email</label>
                 </div>
-                <div class="box">
-                    
-                    <input type="password" required>
+                <div class="box">  
+                    <input type="password" class="loginshow" required>
                     <label class="password">password</label>
+                    <i class="far fa-eye errorloginshow" onclick='passwordShow("loginshow")'></i>
                 </div>
 
                 <button>login</button>
 
+                <a href="./chat.html">Get started</a>
                 <p>Don't have an account? <label for="signupbtn">Signup</label></p>
             </form>
             <div class="signupimage">
@@ -41,6 +45,7 @@
             <form action="post" class="signup">
 
                 <h2>signup</h2>
+                <div><p class="signuperror">This is an error message</p></div>
                 <div class="box">
                     <input type="text" required>
                     <label>first name</label>
@@ -50,16 +55,18 @@
                     <label>last name</label>
                 </div>
                 <div class="box">
-                    <input type="text" required>
+                    <input type="email" required>
                     <label>email</label>
                 </div>
                 <div class="box">
-                    <input type="text" required>
+                    <input type="password" class="signupshow" required>
                     <label>password</label>
+                    <i class="far fa-eye errorsignupshow" onclick='passwordShow("signupshow")'></i>
                 </div>
                 <div class="box">
-                    <input type="text" required>
+                    <input type="password"  class="signupshowpwd" required>
                     <label>repeat password</label>
+                    <i class="far fa-eye errorsignupshowpwd" onclick='passwordShow("signupshowpwd")'></i>
                 </div>
 
                 <button>signup</button>
@@ -69,5 +76,7 @@
         </div>
     </div>
     
+
+    <script src="../main.js"></script>
 </body>
 </html>

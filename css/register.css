@@ -86,6 +86,10 @@
   color: #30b004;
 }
 
+:root body .container .loginForm .login .loginerror {
+  color: red;
+}
+
 :root body .container .loginForm .login .box {
   width: 90%;
   position: relative;
@@ -123,6 +127,18 @@
           transform: scale(0.7);
 }
 
+:root body .container .loginForm .login .box i {
+  color: gray;
+  position: absolute;
+  right: .5rem;
+  cursor: pointer;
+}
+
+:root body .container .loginForm .login .box i.active::before {
+  color: #fff;
+  content: '\f070';
+}
+
 :root body .container .loginForm .login button {
   margin: 2rem 0 2rem 0;
   padding: .5rem 4rem;
@@ -132,6 +148,7 @@
   border: 2px solid #30b004;
   font-weight: bold;
   color: #30b004;
+  cursor: pointer;
 }
 
 :root body .container .loginForm .login button:hover {
@@ -197,6 +214,10 @@
   color: #30b004;
 }
 
+:root body .container .signupForm .signup .signuperror {
+  color: red;
+}
+
 :root body .container .signupForm .signup .box {
   width: 90%;
   position: relative;
@@ -234,6 +255,18 @@
   top: -8px;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+:root body .container .signupForm .signup .box i {
+  color: gray;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+:root body .container .signupForm .signup .box i.active::before {
+  color: #fff;
+  content: '\f070';
 }
 
 :root body .container .signupForm .signup button {
